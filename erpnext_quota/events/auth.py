@@ -11,4 +11,4 @@ def successful_login(login_manager):
     valid_till = quota['valid_till']
     diff = date_diff(valid_till, today())
     if diff < 0:
-        frappe.throw(_("You site is suspended. Please contact Sales"), frappe.AuthenticationError)
+        frappe.throw(_("Dear Customer, your ERP instance has been temporarily suspended due to an inactive subscription. Please renew your subscription on time to avoid permanent deletion of your data. For more information, please contact sales."), frappe.AuthenticationError)
